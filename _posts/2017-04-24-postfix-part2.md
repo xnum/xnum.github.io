@@ -1,6 +1,6 @@
 ---
 layout: post
-title: postfix-part2
+title: postfix 二度修改設定紀錄
 categories: 系統管理
 comments: true
 ---

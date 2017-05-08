@@ -1,6 +1,6 @@
 ---
 layout: post
-title: beanfunapp
+title: beanfunapp 破解嘗試 writeup
 categories: security
 comments: true
 ---
