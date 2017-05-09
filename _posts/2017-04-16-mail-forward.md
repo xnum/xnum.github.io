@@ -2,7 +2,7 @@
 layout: post
 title:  "postfix mail forward到gmail"
 date:   2017-04-16 13:28:06 +0800
-categories: 系統管理
+tags: [postfix, fail2ban, sys admin]
 comments: true
 ---
 

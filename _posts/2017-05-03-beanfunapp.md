@@ -1,7 +1,7 @@
 ---
 layout: post
 title: beanfunapp 破解嘗試 writeup
-categories: security
+tags: [security, android]
 comments: true
 ---
 

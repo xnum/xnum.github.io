@@ -2,7 +2,7 @@
 layout: post
 title:  "交大研究所的兩年心得"
 date:   2017-03-15 17:49:01 +0800
-categories: 心得
+tags: 閒聊
 comments: true
 ---
 

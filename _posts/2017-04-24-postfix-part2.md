@@ -1,7 +1,7 @@
 ---
 layout: post
 title: postfix 二度修改設定紀錄
-categories: 系統管理
+tags: [postfix, sys admin]
 comments: true
 ---
 
