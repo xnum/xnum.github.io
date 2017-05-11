@@ -10,14 +10,21 @@ Email: xnumtw gmail
 
 目前正在尋找兼差機會：
 
-- 家教
-  - C/C++
-  - Linux 系統管理、操作、服務架設
-  - PHP
-- 接案
-  - Linux軟體開發
-  - Web (PHP, jQuery)
-- 作業、解題
+* 家教
+  
+    * C/C++
+      
+    * Linux 系統管理、操作、服務架設
+      
+    * PHP
+
+* 接案
+  
+    * Linux軟體開發
+      
+    * Web (PHP, jQuery)
+      
+* 作業、解題
 
 ## 自傳 (2017年3月)
 
