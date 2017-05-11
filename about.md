@@ -5,11 +5,21 @@ permalink: /about.html
 comment: false
 ---
 
-[Slide version](https://hackmd.io/p/B1wCIwmFg#/)
+Nickname: 某數 (xnum)
+Email: xnumtw gmail
 
-[PDF download](https://www.dropbox.com/s/rfd5cuhozq80lh5/%E8%87%AA%E5%82%B3.pdf?dl=1)
+目前正在尋找兼差機會：
 
-## 自我介紹
+- 家教
+  - C/C++
+  - Linux 系統管理、操作、服務架設
+  - PHP
+- 接案
+  - Linux軟體開發
+  - Web (PHP, jQuery)
+- 作業、解題
+
+## 自傳 (2017年3月)
 
 愛用C++寫程式，略懂C++11。平常也會用其他程式語言寫專案，但多是根據不同環境和使用者需求選擇適合的語言，邊寫邊學。比起開發應用程式，更喜歡寫服務或框架。
 高中時期開始接觸C++，寫ACM題目練習程式能力。大學進入朝陽科大資管系，大一期間參加系上的軟體開發團隊，發現對寫應用程式沒有興趣，因此自行準備轉學考進入國立台中教育大學資訊工程學系大二。
