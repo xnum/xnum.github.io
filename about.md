@@ -6,7 +6,10 @@ comment: false
 ---
 
 Nickname: 某數 (xnum)
-Email: xnumtw gmail
+
+Email: xnumtw@gmail.com
+
+地點：台北/台中
 
 目前正在尋找兼差機會：
 
