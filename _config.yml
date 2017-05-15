@@ -10,6 +10,9 @@ url: 'https://xnum.github.io'
 # For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
 baseurl: ''
 
+gems:
+  - jekyll-sitemap
+
 share:
   facebook: true
   twitter: false
