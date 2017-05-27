@@ -1,6 +1,8 @@
 ---
 layout: post
 title: BeanfunLogin 1.9.4 改版閒聊
+tags: 閒聊
+comments: true
 ---
 
 這篇文章不是以一個專案維護者或開發者的角度所寫，而是我個人的閒聊和分析過程。
