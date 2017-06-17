@@ -5,12 +5,6 @@ permalink: /projects.html
 comment: false
 ---
 
-## Talkings
-
-refer to [my slides](/slides)
-
-## Projects
-
 ### [xnacc 網頁記帳系統](https://github.com/xnum/xnacc) (2017/5)
 
 以會計學理論為基礎，設計的記帳系統
