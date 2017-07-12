@@ -9,7 +9,7 @@ Nickname: 某數 (xnum)
 
 Email: xnumtw@gmail.com
 
-地點：台北/台中
+現在是個軟體工程師，專職系統軟體開發
 
 專長/接案類別：
 
