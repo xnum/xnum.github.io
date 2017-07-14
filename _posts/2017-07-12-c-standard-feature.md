@@ -32,7 +32,7 @@ Standard是制定的公開語言標準，以C來說最知名的大概是ANSI C
 
 而這次提到的Features，則是有別於Standard，制定的是系統相關的API
 
-如POSIX、XOPEN、XVID等等...，當define不同Feature後，就能使用該Feature制定的functions
+如POSIX、XOPEN、SVID等等...，當define不同Feature後，就能使用該Feature制定的functions
 
 同一個標準的名稱還有不同年份制定的不同版本，其實看全名就非常清楚這東西到底是甚麼
 
