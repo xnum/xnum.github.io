@@ -1,6 +1,7 @@
 ---
 layout: post
 title: C Standard & Feature
+tags: ['C/C++']
 ---
 
 工作上需要Porting系統從Solaris到Linux上
