@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Solaris的Select Bug
-tags: ['C/C++']
+tags: ['UNIX']
 ---
 
 今天追蹤一個Select上的Bug，問題的起因是程式某個地方的Select卡住永遠不會Return，但監聽的Socket已經關閉了
