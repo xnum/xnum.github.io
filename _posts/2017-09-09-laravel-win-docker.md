@@ -22,5 +22,9 @@ tags: [docker]
 
 `docker exec -it laravel /bin/bash`
 
+Exited之後把他再叫起來
+
+`docker start laravel`
+
 
 ref: https://blog.wu-boy.com/2016/03/replace-laravel-homestead-with-docker/
