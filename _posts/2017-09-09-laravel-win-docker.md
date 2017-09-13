@@ -1,7 +1,7 @@
 ---
 layout: post
 title: win上的docker執行laravel專案
-tags: [docker]
+tags: [windows docker]
 ---
 
 紀錄一下docker在windows上開啟的作法
