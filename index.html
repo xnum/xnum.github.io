@@ -36,7 +36,8 @@ layout: default
         {{ post.title }}
       </div>
       <div class="list-post-desc">
-          {{ post.excerpt }}
+          <!-- {{ post.excerpt }} -->
+          {{ post.content | markdownify | strip_html | truncate: 70 }}
       </div>
     </a>
 
