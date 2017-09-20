@@ -5,7 +5,7 @@ tags:
 - windows programming
 ---
 
-[MSDN](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682655(v=vs.85).aspx)
+[MSDN連結](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682655(v=vs.85).aspx)
 
 用於行程間同步
 

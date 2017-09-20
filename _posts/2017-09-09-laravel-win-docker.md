@@ -28,3 +28,5 @@ Exited之後把他再叫起來
 
 
 ref: https://blog.wu-boy.com/2016/03/replace-laravel-homestead-with-docker/
+
+mysql cli以utf-8輸出`set names utf8;`
