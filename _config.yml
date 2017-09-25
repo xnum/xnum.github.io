@@ -40,7 +40,7 @@ social:
 # Google Analytics key, leave blank to ignore
 # google_analytics_key: 'UA-69634995-2'
 google-analytics:
-  id:               'UA-69634995-2'
+  id:               'UA-69634995-3'
 # Yandex metrica (https://metrica.yandex.com/) leave blank to ignore or put true to use
 yandex_metrica:
 
