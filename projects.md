@@ -37,7 +37,7 @@ Skills: `C# WinForm` `COMPort` `network programming` `php/lumen5.4` `PDF generat
 - 網路程式設計
   - [Proj1](https://bitbucket.org/x000032001/np_project1_0456095)
   - [Proj2](https://bitbucket.org/x000032001/np_project2_0456095)
-  - [Proj3](https://bitbucket.org/x000032001/np_project3_0456095)
+  - [Proj3](https://bitbucket.org/x000032001/np_project3_0456095) [epoll+coroutine version](https://github.com/xnum/np_proj3)
   - [Proj4](https://bitbucket.org/x000032001/np_project4_0456095)
 
 ### Nonogram solver [xnum/nng2014](https://github.com/xnum/nng2014)
