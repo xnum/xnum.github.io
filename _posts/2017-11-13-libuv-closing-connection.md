@@ -15,7 +15,7 @@ libuv常常有一些小改動
 
 當對端主動關閉連線或發送shutdown(WR)時，read事件就會得到EOF
 
-在`read_cb`的parameter nread被設為`UV_EO`F，這時就要進行錯誤處理
+在`read_cb`的parameter nread被設為`UV_EOF`，這時就要進行錯誤處理
 
 假使我要進行的是將連線進行關閉的話，libuv的API文件提供了一個引子
 
