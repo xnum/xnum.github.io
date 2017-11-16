@@ -8,6 +8,10 @@ tags:
 ## 環境
 
 Solaris 10 (SunOS dev-ts1 5.10 Generic_150400-26 sun4v sparc sun4v)
+
+$ isainfo
+sparcv9 sparc
+
 gcc 3.3.2 
 
 Reading specs from /usr/local/lib/gcc-lib/sparc-sun-solaris2.10/3.3.2/specs
@@ -28,7 +32,12 @@ gcc version 3.3.2
 
 ```
 ./autogen.sh
+
+32bit:
 CFLAGS="-DSUNOS_NO_IFADDRS -D__EXTENSIONS__ -D_XOPEN_SOURCE=500 -D__SUNPRO_C" ./configure
+
+64bit:
+CFLAGS="-DSUNOS_NO_IFADDRS -D__EXTENSIONS__ -D_XOPEN_SOURCE=500 -D__SUNPRO_C -m64" LDFLAGS=-m64./configure
 ```
 
 解說：
