@@ -22,6 +22,12 @@ gcc toolchain的幾種主流方法：
 - TDM-GCC-64 
 - mingw-w64
 
+p.s. 偶然發現的一篇[文章](http://mingw.5.n7.nabble.com/importing-sys-queue-h-td9462.html)講到cygwin和mingw的不同
+
+> porting unix software to windows is NOT the 
+> purpose of MinGW -- that's what the Cygwin project is for.  MinGW is a 
+> gcc compiler for creating win32 programs
+
 編譯還需要幾個相關工具`libtool` `automake` `m4` `aclocal`
 
 在Windows上編譯還需要另外安裝這些工具，而且被該死的OfficeScan擋住以致於編譯速度天殺的慢
