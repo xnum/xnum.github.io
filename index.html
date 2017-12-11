@@ -4,7 +4,7 @@ layout: default
 
 <header class="header">
   <div class="header-title">
-    <a href="{{ site.url }}{{ site.baseurl }}">{{ site.name }}</a>
+    <a href="/">{{ site.name }}</a>
   </div>
   <nav class="header-nav">
     {% for nav in site.nav %}
@@ -14,7 +14,7 @@ layout: default
     <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
     {% endif %}
     {% endfor %}
-    <a href="{{site.url }}{{ site.baseurl }}/feed.xml">rss</a>
+    <a href="feed.xml">rss</a>
   </nav>
 </header>
 
