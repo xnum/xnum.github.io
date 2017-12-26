@@ -9,6 +9,8 @@ tags:
 
 透過一對[控制碼](https://www.censoft.com/support/kb/?p=938)來開關
 
+例如一些報表或系統資訊在遠端主機上產生後列印的場合，就會使用到這項功能
+
 在putty(及大部分模擬終端軟體?)，都是以raw模式呼叫WritePrinter直接把bytes送出去
 
 不經由driver時，列印中文字需要印表機內建中文字體才支援
