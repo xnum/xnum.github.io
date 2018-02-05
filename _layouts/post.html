@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.12&appId=1031940836869971&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <header>
   <div class="header-small">
     <a href="/">{{ site.name }}</a>
@@ -25,6 +36,7 @@ layout: default
   </div>
 
   {{ content }}
+<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="standard" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
 
   <!-- Disqus -->
   {% if page.comments != false and site.disqus.id %}
