@@ -34,12 +34,10 @@ _In_ LPCTSTR lpName
 );
 ```
 
-{% highlight c linenos %}
+{% code c linenos caption=client.c %}
 #define UNICODE
 #include <windows.h>
 #include <stdio.h>
-
-// client 
 
 void error()
 {
@@ -69,14 +67,13 @@ int main()
 
     return 0;
 }
-{% endhighlight %}
+{% endcode %}
 
-{% highlight c linenos %}
+{% code c linenos caption=server.c %}
 #define UNICODE
 #include <windows.h>
 #include <stdio.h>
 
-/* server */
 void error()
 {
     char buf[256] = {};
@@ -109,4 +106,4 @@ int main()
 
     return 0;
 }
-{% endhighlight %}
+{% endcode %}

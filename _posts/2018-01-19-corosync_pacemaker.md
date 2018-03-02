@@ -41,7 +41,7 @@ ms1產生金鑰
 
 如下，採用udp單播連線
 
-```
+{% code text caption=/etc/corosync/corosync.conf %}
 totem {
         version: 2
 
@@ -104,8 +104,7 @@ service {
   name: pacemaker
   ver: 1
 }
-
-```
+{% endcode %}
 
 `/etc/default/corosync`
 START=yes

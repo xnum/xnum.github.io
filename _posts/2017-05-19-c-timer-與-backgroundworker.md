@@ -18,7 +18,7 @@ tags: ['C#', '.Net']
 
 這樣就不需要在BackgroundWorker直接存取控制項
 
-```C#
+{% code cs linenos %}
 public class Form1 : Form
 {
     private ConcurrentQueue<Data> queue;
@@ -42,4 +42,4 @@ public class Form1 : Form
         // TODO: Perform data
     }
 }
-```
+{% endcode %}

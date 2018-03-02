@@ -17,9 +17,9 @@ comments: true
 
 [又翻了一篇文章來解](http://blog.snapdragon.cc/2013/07/07/setting-postfix-to-encrypt-all-traffic-when-talking-to-other-mailservers/)
 
-最後我的TLS相關設定長這樣(`/etc/postfix/main.cf`)
+最後我的TLS相關設定長這樣
 
-```
+{% code linenos caption=/etc/postfix/main.cf %}
 # TLS parameters
 smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
 smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
@@ -30,7 +30,7 @@ smtpd_tls_security_level = may
 smtp_tls_security_level = may
 smtp_tls_loglevel = 1
 smtpd_tls_loglevel = 1
-```
+{% endcode %}
 
 還有個收到信以後，寄信回去的mail會是我的gmail而不是來自`xnum.tw`的問題...之後再想辦解決吧
 
