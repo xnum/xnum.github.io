@@ -20,7 +20,7 @@ echo "/tmp/cores/core.%e.%p.%h.%t" > /proc/sys/kernel/core_pattern
 
 程式內開啟
 
-{% code c linenos %}
+```
 #include <sys/resource.h>
 
 void enable_coredump()
@@ -29,7 +29,7 @@ void enable_coredump()
     core_limits.rlim_cur = core_limits.rlim_max = RLIM_INFINITY;
     setrlimit(RLIMIT_CORE, &core_limits);
 }
-{% endcode %}
+```
 
 測試
 

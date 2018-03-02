@@ -16,12 +16,12 @@ comments: true
 
 要兩個domain設定都同時有寫才會處理，`main.cf`部分設定如下
 
-{% code linenos caption=main.cf %}
+```
 mydestination = xnum.tw
 virtual_alias_domains = xnum.tw
 luser_relay = s000032001@gmail.com
 local_recipient_maps = 
-{% endcode %}
+```
 
 下面兩行是找不到local user時要把信轉給誰，然後就能從我的gmail帳號收到信了
 
@@ -43,8 +43,6 @@ $ sudo service postfix reload
 結果regex沒寫好，全都missed，修改這個檔案`/etc/fail2ban/filter.d/postfix.conf `
 
 failregex加一行 `^%(__prefix_line)sNOQUEUE: reject: RCPT from \S+\[<HOST>\]: 454 4\.7\.1 .*$`
-
-執行結果
 
 ```
 Failregex: 30351 total

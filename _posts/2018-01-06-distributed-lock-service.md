@@ -27,8 +27,9 @@ tags:
 
 而zookeeper：
 
-> Namenode(包括 YARN ResourceManager) 的主备选举是通过 ActiveStandbyElector 来完成的，ActiveStandbyElector 主要是利用了 Zookeeper 的写一致性和临时节点机制
-
+```
+Namenode(包括 YARN ResourceManager) 的主备选举是通过 ActiveStandbyElector 来完成的，ActiveStandbyElector 主要是利用了 Zookeeper 的写一致性和临时节点机制
+```
 
 raft consensus algorithm裡面也包含一個選舉的部分，大多數卻不直接拿來作為指派master用，大概也是同理
 

@@ -136,4 +136,4 @@ eos
   end
 end
 
-Liquid::Template.register_tag("code", Czak::Tags::HighlightCaptionBlock)
+Liquid::Template.register_tag("highlight2", Czak::Tags::HighlightCaptionBlock)
