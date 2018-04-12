@@ -61,6 +61,8 @@ tags:
 
 加上測試時會用到80 port (blog預覽 json-resume預覽)，在nginx加了reverse proxy
 
+不然chrome會擋非https的網站，真是煩死人
+
 設定大概長這樣
 
 轉址部分
@@ -91,7 +93,7 @@ server {
 
     root /var/www/html;
 
-    server_name ln.xnum.tw;
+    server_name test.xnum.tw;
 
     location / {
         proxy_set_header        Host $host;
@@ -99,9 +101,9 @@ server {
         proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header        X-Forwarded-Proto $scheme;
 
-        proxy_pass          http://localhost:4000;
+        proxy_pass          http://localhost:8000;
         proxy_read_timeout  5;
 
-        proxy_redirect      http://localhost:4000 https://ln.xnum.tw;
+        proxy_redirect      http://localhost:8000 https://test.xnum.tw;
     }
 ```
