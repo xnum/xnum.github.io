@@ -75,8 +75,6 @@ nav:
     url:            "/archive"
   - name:           "Tags"
     url:            "/tags"
-  - name:           "Projects"
-    url:            "/projects"
 
 # Sass
 sass:
