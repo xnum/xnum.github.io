@@ -7,11 +7,17 @@ tags:
 
 前陣子被問到為什麼不用redis來取代xdmq，在實作xdmq前我認為redis的角色屬於cache，較未詳細研究其底層理論。
 
-我覺得這是一個蠻好的切入點來研究redis cluster的特性，究竟他和xdmq有什麼差異存在?
+我覺得這是一個蠻好的切入點來研究redis cluster的特性。
 
-由於xdmq事實上利用了raft達到需要的功能，因此部分的比較會直接用raft當作對象。
+我想要利用middleware達成幾項功能
 
-由於單機佈署redis無法達成高可用性，因此這邊的比較會基於redis cluster。
+- 從多台client同時接收訂單，不依靠Time sync的設計而是由middleware決定訂單順序
+- 一旦訂單順序被決定，middleware返回ACK後，沒有人可以再修改，因此ACK後也不允許掉資料
+- 持久化，所有訂單紀錄都被保留下來，可以查詢(對帳)
+- pull模式，middleware不用管consumer的狀態
+- middleware可以replay訂單，也就可以拿來進行回歸測試
+
+由於xdmq利用了raft達到需要的功能，部分的比較會直接用raft當作對象。
 
 ## replication
 
