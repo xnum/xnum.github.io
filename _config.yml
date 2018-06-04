@@ -70,7 +70,7 @@ highlighter: rouge
 
 nav:
   - name:           "About"
-    url:            "/about"
+    url:            "https://xnum.github.io/resume/"
   - name:           "Archive"
     url:            "/archive"
   - name:           "Tags"
