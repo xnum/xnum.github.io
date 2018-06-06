@@ -23,6 +23,8 @@ tag:
 
 但可能有很低的誤報率，以為該element存在於set中，事實上並不存在(false positive)
 
+> probably in set or definitely not in set
+
 一般還可以應用在
 
 - 網頁爬蟲：記錄已經爬過的URL
