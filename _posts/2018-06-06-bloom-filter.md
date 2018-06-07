@@ -53,10 +53,3 @@ return arr[MD5(E) % N] && arr[SHA1(E) % N]
 
 避免碰撞則是用多個hash function，但N越小，誤判率仍然會隨之增加
 
-對於bloom filter為甚麼不會把不存在的element當成已存在的element
-
-好像沒有人特地去解釋這一點，我猜想當N足夠大時，很難找到有element
-
-可以使多個hash functions都發生碰撞吧
-
-但這就依賴於hash function的均勻程度了
