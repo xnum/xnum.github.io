@@ -2,6 +2,8 @@
 layout: post
 title: boost fiber library 特性筆記
 date: 2019-08-12 15:39 +0800
+tags:
+- C/C++
 ---
 
 fiber是boost內的coroutine library，眾所皆知的coroutine比thread更輕量快速，但也有一些特性和thread相異。
