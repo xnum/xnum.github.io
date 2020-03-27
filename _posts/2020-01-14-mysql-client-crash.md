@@ -2,6 +2,8 @@
 layout: post
 title: libmysqlclient crash debug
 date: 2020-01-14 18:58 +0800
+tags:
+- DB
 ---
 
 現象：

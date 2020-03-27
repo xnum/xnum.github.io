@@ -2,6 +2,8 @@
 layout: post
 title: mysql dead lock排除記
 date: 2019-12-25 00:53 +0800
+tags:
+- DB
 ---
 
 一開發中程式進行測試時跳出 `dead lock detected` 字眼，發生在 `INSERT INTO ...`。
