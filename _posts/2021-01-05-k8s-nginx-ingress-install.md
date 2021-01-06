@@ -63,3 +63,100 @@ spec:
             port:
               number: 3000
 ```
+
+# 讓 nginx 看到 external IP
+
+nginx helm values.yaml 加上
+
+```
+controller:
+  config:                                                                       
+    use-proxy-protocol: "true"        
+```
+
+haproxy.cfg 修改
+
+```
+global      
+    log /dev/log local0
+    log /dev/log local1 notice  
+    daemon
+                                                                                                                  
+#---------------------------------------------------------------------
+# common defaults that all the 'listen' and 'backend' sections will   
+# use if not designated in their block
+#---------------------------------------------------------------------
+defaults            
+    mode                    http
+    log                     global                                                                                
+    option                  httplog                                                                               
+    option                  dontlognull                                                                           
+    option http-server-close
+    option forwardfor       except 127.0.0.0/8                                                                    
+    option                  redispatch                                                                            
+    retries                 1                                                                                     
+    timeout connect         5s
+    timeout client          7d
+    timeout server          7d
+                                                         
+#---------------------------------------------------------------------
+# apiserver frontend which proxys to the masters
+#---------------------------------------------------------------------
+frontend apiserver                     
+    bind *:8443                                                                                                   
+    mode tcp       
+    option tcplog
+    default_backend apiserver
+                                                         
+#---------------------------------------------------------------------
+# round robin balancing for apiserver                                                                             
+#---------------------------------------------------------------------
+backend apiserver
+    mode tcp             
+    option tcp-check
+    balance     roundrobin
+        server k8s-node1 k8s-node1:6443 check
+        server k8s-node2 k8s-node2:6443 check
+        server k8s-node3 k8s-node3:6443 check
+
+#---------------------------------------------------------------------
+# ingress-http frontend which proxys to the k8s ingress controller
+#---------------------------------------------------------------------
+frontend ingress-http
+    bind *:80                   
+    mode tcp                                                                                                      
+    option tcplog                                                                                                 
+    default_backend ingress-http                                                                                  
+                                                         
+#---------------------------------------------------------------------                                            
+# round robin balancing for ingress-http                                                                          
+#---------------------------------------------------------------------                                            
+backend ingress-http          
+    mode tcp                  
+    option tcp-check          
+    balance     roundrobin                               
+        server k8s-node1 k8s-node1:32080 check send-proxy             
+        server k8s-node2 k8s-node2:32080 check send-proxy 
+        server k8s-node3 k8s-node3:32080 check send-proxy             
+                                                         
+#---------------------------------------------------------------------                                            
+# ingress-tls frontend which proxys to the k8s ingress controller
+#---------------------------------------------------------------------
+frontend ingress-tls         
+    bind *:443                                           
+    mode tcp                                                                                                      
+    option tcplog                                                                                                 
+    default_backend ingress-tls                                                                                   
+                                                         
+#---------------------------------------------------------------------
+# round robin balancing for ingress-tls
+#---------------------------------------------------------------------
+backend ingress-tls                          
+    mode tcp                                 
+    option tcp-check                         
+    balance     roundrobin
+        server k8s-node1 k8s-node1:32443 check send-proxy             
+        server k8s-node2 k8s-node2:32443 check send-proxy         
+        server k8s-node3 k8s-node3:32443 check send-proxy             
+                                                         
+```
