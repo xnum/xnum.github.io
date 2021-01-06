@@ -33,4 +33,33 @@ helm install \
 
 https://github.com/bwolf/cert-manager-webhook-gandi
 
-看cert-manager pod可以看到狀態
+---
+
+cert-manager 和 nginx-ingress-controller 和 tls secret 放在同一個 namespace (e.g. ingress)
+
+個別的 ingress 放在自己的 namespace (e.g. monitoring)
+
+加上 tls 讓 http protocol 被 308 轉址
+
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana
+spec:
+  tls:
+  - hosts:
+    - grafana.example.com
+    secretName: wildcard-xxx-tls
+  rules:
+  - host: grafana.examle.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: grafana
+            port:
+              number: 3000
+```
