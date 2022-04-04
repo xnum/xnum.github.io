@@ -9,7 +9,7 @@ categories:
 
 對需要雙向傳輸訊息時非常有用。
 
-{% highlight c %}
+```c
 /* pipe server */
 #include <stdio.h>
 #include <windows.h>
@@ -68,9 +68,9 @@ int main(void)
 
     return 0;
 }
-{% endhighlight %}
+```
 
-{% highlight c %}
+```c
 /* pipe client */
 #include <stdio.h>
 #include <windows.h>
@@ -122,4 +122,4 @@ int main(void)
 
     return 0;
 }
-{% endhighlight %}
+```

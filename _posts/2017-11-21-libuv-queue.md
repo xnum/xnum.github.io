@@ -9,7 +9,7 @@ categories:
 
 相較於sys/queue而言更加簡潔易用，也沒有license問題，作為list or queue(可以抄來用)的終極方案當仁不讓
 
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -48,4 +48,4 @@ int main()
 
     return 0;
 }
-{% endhighlight %}
+```

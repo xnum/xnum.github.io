@@ -15,7 +15,7 @@ set -x -e等，在function內不會繼承設定
 
 因此如set -x，將不會列印fnuction內執行什麼指令
 
-{% highlight shell linenos %}
+```
 set -x
 
 function swp {
@@ -29,7 +29,7 @@ b=2
 echo $a $b
 swp $a $b
 echo $a $b $tmp
-{% endhighlight %}
+```
 
 ```
 $ ksh k.sh
@@ -46,7 +46,7 @@ $ ksh k.sh
 
 同樣的Traps在function內也不被繼承
 
-{% highlight shell linenos %}
+```
 trap 'echo "Run $LINENO"' DEBUG
 
 function f {
@@ -57,7 +57,7 @@ cd /opt
 f
 cd /
 f
-{% endhighlight %}
+```
 
 ```
 $ ksh j.sh
@@ -74,7 +74,7 @@ Run 10
 
 function沒有return 0被視為發生錯誤
 
-{% highlight shell linenos %}
+```
 trap 'echo "Fatal"; exit' ERR
 
 function f {
@@ -85,7 +85,7 @@ function f {
 echo "Hello"
 f
 echo "exited gracefully"
-{% endhighlight %}
+```
 
 ```
 $ ksh n.sh
@@ -98,7 +98,7 @@ Fatal
 
 沒有return value時，會返回最後一條執行的指令
 
-{% highlight shell linenos %}
+```
 trap 'echo "Fatal"; exit' ABRT
 
 function f {
@@ -110,7 +110,7 @@ echo "Hello"
 f
 echo $?
 echo "exited gracefully"
-{% endhighlight %}
+```
 
 特別的是ksh把該指令的訊號也當成自己的訊號
 

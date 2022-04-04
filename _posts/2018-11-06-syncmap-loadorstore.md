@@ -10,7 +10,7 @@ categories:
 
 如果不存在的話就初始化並寫入，但多個goroutine都要進行同一個操作時就可能發生races。
 
-{% highlight golang linenos %}
+```go
 package main
 
 import (
@@ -35,7 +35,7 @@ func main() {
 	val, ok := table.Load("KEY")
 	fmt.Println(val, ok)
 }
-{% endhighlight %}
+```
 
 這段程式的執行結果可能print出0~99間任意的val值，而非固定是0。
 
@@ -49,7 +49,7 @@ func main() {
 
 並且只會有一個goroutine列印出`Set to XX`。
 
-{% highlight golang linenos %}
+```go
 package main
 
 import (
@@ -75,7 +75,7 @@ func main() {
 	val, ok := table.Load("KEY")
 	fmt.Println(val, ok)
 }
-{% endhighlight %}
+```
 
 輸出如下：
 
@@ -94,7 +94,7 @@ Set to 99
 
 並讓要Store的goroutine在寫入成功後才初始化物件。範例如下：
 
-{% highlight golang linenos %}
+```go
 package main
 
 import (
@@ -159,11 +159,11 @@ func main() {
 	}
 	wg.Wait()
 }
-{% endhighlight %}
+```
 
 一個效果相同，但用once實作的版本，可讀性較好，效能差距小於1%：
 
-{% highlight golang linenos %}
+```go
 package main
 
 import (
@@ -214,4 +214,4 @@ func main() {
 	}
 	wg.Wait()
 }
-{% endhighlight %}
+```

@@ -18,7 +18,7 @@ categories:
 
 一個簡單的虛擬碼如下：
 
-{% highlight golang %}
+```go
 func Load(key int) int {
     val, success := LoadFromCache(key)
     if success {
@@ -29,13 +29,13 @@ func Load(key int) int {
     StoreToCache(key, val)
     return val
 }
-{% endhighlight %}
+```
 
 在實際的使用場景中，我們有時候需要提供一個服務，性質類似一個CDN：為了要減輕後台的運算壓力，要將後台的資料進行caching。cache miss或每隔一段時間都往後台重新抓取一份新資料並蓋過舊值。使用者可以接受讀取到舊值，但要避免大量查詢衝向cache或db讓後台的服務癱瘓。
 
 只考慮定時更新資料，假設服務都正常運作的情況下，將每次更新的時間都同樣寫入cache，並用此判斷是否應該更新。
 
-{% highlight golang %}
+```go
 func EnsureUpToDate(key int) {
     const period = 10 * time.Second
     timestamp := LoadTimestampFromCache(key)
@@ -50,12 +50,12 @@ func LoadWithUpdate(key int) int {
     EnsureUpToDate(key)
     return Load(key)
 }
-{% endhighlight %}
+```
 
 而實際上更新時還要搭配distributed lock來防止有大量request同時去更新這份資料，詳細的實作方式可以參考[redis topic](https://redis.io/topics/distlock)。加上lock之後由於我們的服務是使用者可以接受舊值的，所以在搶lock失敗後，不需要等待，直接回傳舊值即可。
 
 
-{% highlight golang %}
+```go
 func EnsureUpToDateWithLock(key int) int {
     grant := TryLock(key)
     if grant {
@@ -63,11 +63,11 @@ func EnsureUpToDateWithLock(key int) int {
         Unlock(key)
     }
 }
-{% endhighlight %}
+```
 
 接下來則是考量到後台服務暫時不可用的狀況：我們可以修改將寫入的timestamp來增加cache的更新頻率，避免流量持續湧向後台，或是更新間隔過長，導致服務恢復後無法即時更新資料。
 
-{% highlight golang %}
+```go
 func EnsureUpToDate(key int) {
     const period = 10 * time.Second
     timestamp := LoadTimestampFromCache(key)
@@ -80,11 +80,11 @@ func EnsureUpToDate(key int) {
         }
     }
 }
-{% endhighlight %}
+```
 
 最後則是在本地也建立一份cache，避免每次都向redis詢問，這個更新頻率可以設定得更短，一個粗淺的示範版本：
 
-{% highlight golang %}
+```go
 type LocalCache struct {
     val int
     mtx sync.RWMutex
@@ -111,4 +111,4 @@ func (lc *LocalCache) Get() int {
     defer lc.mtx.RUnlock()
     return lc.val
 }
-{% endhighlight %}
+```

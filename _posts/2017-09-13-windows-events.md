@@ -34,7 +34,7 @@ _In_ LPCTSTR lpName
 );
 ```
 
-{% highlight c linenos %}
+```cpp
 #define UNICODE
 #include <windows.h>
 #include <stdio.h>
@@ -69,9 +69,9 @@ int main()
 
     return 0;
 }
-{% endhighlight %}
+```
 
-{% highlight c linenos %}
+```cpp
 #define UNICODE
 #include <windows.h>
 #include <stdio.h>
@@ -103,10 +103,10 @@ int main()
         {
             printf("PulseEvent:");
             error();
-        } 
+        }
         sleep(1);
     }
 
     return 0;
 }
-{% endhighlight %}
+```

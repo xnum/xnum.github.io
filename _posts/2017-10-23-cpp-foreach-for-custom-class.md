@@ -11,7 +11,7 @@ categories:
 
 在閱讀上更為簡潔
 
-{% highlight c++ %}
+```cpp
 #include <vector>
 #include <iostream>
 
@@ -45,5 +45,5 @@ int main()
     }
     return 0;
 }
+```
 
-{% endhighlight %}

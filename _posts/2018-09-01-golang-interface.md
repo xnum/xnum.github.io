@@ -18,7 +18,7 @@ interface的設計在golang中是一個非常強大的東西，任何struct只�
 
 基本的interface寫法如下：
 
-{% highlight golang linenos %}
+```go
 type LineReader interface {
     ReadLine() (line string, done bool, err error)
 }
@@ -46,7 +46,7 @@ func main() {
     f := &FileReader{}
     process(f)
 }
-{% endhighlight %}
+```
 
 將一個實作了`LineReader interface`的`struct FileReader`丟給`process()`使用，function不需要知道是由哪個struct實作。
 
@@ -57,12 +57,12 @@ func main() {
 在golang中可以將interfaces組合成一個新的interface，寫法如下：
 
 
-{% highlight golang linenos %}
+```go
 type ReadCloser interface {
     Reader
     Closer
 }
-{% endhighlight %}
+```
 
 當function需要對Reader新增行為時，不需要修改Reader，只要定義一個新的interface就好。
 
@@ -76,7 +76,7 @@ type ReadCloser interface {
 
 interface當參數應該不難理解，對於擴充性和單元測試顯得更有彈性，比如以下這段程式：
 
-{% highlight golang linenos %}
+```go
 func WriteHeader(w *io.Writer) error {
     ...
 }
@@ -89,7 +89,7 @@ func Write() {
     var f *os.File = newFile(...)
     WriteHeader(f)
 }
-{% endhighlight %}
+```
 
 如果要測試WriterHeader的時候，只要把原本傳入的File改為MockFile就可以驗證行為，但是return concrete types就不是那麼直觀了。
 
@@ -105,7 +105,7 @@ func Write() {
 
 另一個用法是embedding types組合技，struct可以使用anonymous field把其他struct整個塞進來，該struct實作的interface就可以一併使用，還可以overwrite掉function。
 
-{% highlight golang linenos %}
+```go
 type HttpClient interface {
 	Get(url string)
 }
@@ -136,7 +136,7 @@ func main() {
 	b := &BaseClient{}
 	do(b, "node2")
 }
-{% endhighlight %}
+```
 
 會印出
 ```
@@ -149,7 +149,7 @@ BaseClient.Get(node2)
 
 如下所示：
 
-{% highlight golang linenos %}
+```go
 type Worker interface {
 	Add(string)
 	Filter()
@@ -211,7 +211,7 @@ func main() {
 	Prepare(d)
 	Work(d)
 }
-{% endhighlight %}
+```
 
 output:
 

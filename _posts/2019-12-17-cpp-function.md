@@ -13,7 +13,7 @@ categories: C/C++
 
 然而有些設計不良的API是沒有提供這個實用的方式的，於是我開始尋找使用C++的方式把這個東西丟進去，例如bind
 
-{% highlight c++ linenos %}
+```cpp
 typedef void(* handler) ();
 
 void run(handler h)
@@ -28,7 +28,7 @@ int main() {
 
     return 0;
 }
-{% endhighlight %}
+```
 
 然後編譯器就生氣了
 
@@ -38,7 +38,7 @@ error: cannot convert ‘std::_Bind_helper<false, void (&)(int), int>::type {aka
 
 一段一開始看不太懂的錯誤，上Stack Overflow找找看，發現有人提供轉成std::function的方法，馬上抄來試試看。
 
-{% highlight c++ linenos %}
+```cpp
 int main() {
     function<void()> f = (bind(gg, 3));
     handler *h = f.target<void(*)()>();
@@ -47,11 +47,11 @@ int main() {
 
     return 0;
 }
-{% endhighlight %}
+```
 
 編譯過了，但是果然return 1。沒辦法了，試試看lambda吧。
 
-{% highlight c++ linenos %}
+```cpp
 int main() {
     int i = 3;
     function<void()> f = ([i]() {});
@@ -61,13 +61,13 @@ int main() {
 
     return 0;
 }
-{% endhighlight %}
+```
 
 果不其然也return 1了。到底是為什麼呢，只好來仔細的研究看看。
 
 先從bind開始吧，c++有個半殘但勉強能用的東西可以揭開他們的真面目..typeid(x)
 
-{% highlight c++ linenos %}
+```cpp
 int i = 3;
 auto lambda = [i]() {};
 auto b = bind(gg, i);
@@ -75,7 +75,7 @@ function<void()> f = ([i]() {});
 cout << typeid(lambda).name() << endl;
 cout << typeid(b).name() << endl;
 cout << typeid(f).name() << endl;
-{% endhighlight %}
+```
 
 果然印出一堆亂碼
 
@@ -95,14 +95,14 @@ std::function<void ()>
 
 先來看bind，根據[source code](https://gcc.gnu.org/onlinedocs/gcc-7.4.0/libstdc++/api/a00071_source.html#l00450)
 
-{% highlight c++ linenos %}
+```cpp
    template<typename _Signature>
         struct _Bind;
-{% endhighlight %}
+```
 
 原來根本不是什麼function，是struct阿，那它是怎麼呼叫的呢，繼續往下找
 
-{% highlight c++ linenos %}
+```cpp
        // Call unqualified
        template<typename... _Args,
            typename _Result = _Res_type<tuple<_Args...>>>
@@ -113,11 +113,11 @@ std::function<void ()>
           std::forward_as_tuple(std::forward<_Args>(__args)...),
           _Bound_indexes());
     }
-{% endhighlight %}
+```
 
 原來是overload operator()，再繼續往下看__call怎麼實作的
 
-{% highlight c++ linenos %}
+```cpp
        // Call unqualified
        template<typename _Result, typename... _Args, std::size_t... _Indexes>
     _Result
@@ -127,14 +127,14 @@ std::function<void ()>
           _Mu<_Bound_args>()(std::get<_Indexes>(_M_bound_args), __args)...
           );
     }
-{% endhighlight %}
+```
 
 內部用了invoke執行該function，而參數`_M_f`和`_M_bound_args`其實是struct的member
 
-{% highlight c++ linenos %}
+```cpp
        _Functor _M_f;
        tuple<_Bound_args...> _M_bound_args;
-{% endhighlight %}
+```
 
 而[std::function](https://gcc.gnu.org/onlinedocs/gcc-7.4.0/libstdc++/api/a06222.html#a8c5a08fdc36581c53fa597667322cf7d)其實就是個可以封裝各種functor物件或function pointer的class
 
