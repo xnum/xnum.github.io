@@ -1,0 +1,97 @@
+- name: Morris' Blog
+  url: http://morris821028.github.io/
+  src: life
+
+- name: Eternity
+  url: http://blog.tinlans.org/
+  src: life
+
+- name: Gea-Suan Lin's BLOG
+  url: https://blog.gslin.org/
+  src: www
+
+- name: 云风的 BLOG
+  url: https://blog.codingnow.com/
+  src: www
+
+- name: 后端进阶
+  url: https://objcoding.com/
+  src: www
+
+- name: 依云's Blog
+  url: https://blog.lilydjwg.me/
+  src: www
+
+- name: 博客园 - xybaby
+  url: https://www.cnblogs.com/xybaby/
+  src: www
+
+- name: 噴火獸號：裴列恩之艦
+  url: https://nyllep.wordpress.com/
+  src: www
+
+- name: Beyond the Void
+  url: https://byvoid.com/zht/
+  src: www
+
+- name: 聂永的博客
+  url: http://www.blogjava.net/yongboy/
+  src: www
+
+- name: Heresy's Space
+  url: https://kheresy.wordpress.com/
+  src: www
+
+- name: Jiajun的编程随想
+  url: https://jiajunhuang.com/
+  src: www
+
+- name: Zlatan Eevee
+  url: https://ieevee.com/
+  src: www
+
+- name: Tsung's Blog
+  url: https://blog.longwin.com.tw/
+  src: www
+
+- name: 风雪之隅
+  url: https://www.laruence.com/
+  src: www
+
+- name: 始终
+  url: https://liam.page/
+  src: www
+
+- name: 酷 壳 – CoolShell
+  url: https://coolshell.cn/
+  src: www
+
+- name: heiyeluren的blog（黑夜路人的开源世界）
+  url: https://blog.csdn.net/heiyeshuwu
+  src: www
+
+- name: Docker Blog
+  url: https://www.docker.com/blog/
+  src: software
+
+- name: Gentoo Linux
+  url: https://www.gentoo.org/news/
+  src: software
+
+- name: Kubernetes Blog
+  url: https://kubernetes.io/blog/
+  src: software
+
+- name: Project Calico
+  url: https://www.tigera.io/category/technical-blog/
+  src: software
+
+- name: 阮一峰的网络日志
+  url: http://www.ruanyifeng.com/blog/
+  src: news
+
+- name: HelloGitHub 月刊
+  url: https://hellogithub.com/
+  src: news
+
+

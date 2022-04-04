@@ -1,0 +1,172 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://xnum.github.io
+date_format: "ordinal"
+title: xnum's blog
+subtitle: ''
+description: ''
+keywords: go,c++,kubernetes,linux
+timezone: Asia/Taipei
+encoding: "utf-8"
+repository: xnum/xnum.github.io
+# 对 css 和 js 资源的 cdn 加速配置
+cdn:
+    jsdelivr:
+        enabled: false
+# 可选组件配置
+components:
+    # 分享
+    # weibo,qq,wechat,douban,qzone,linkedin,facebook,twitter
+    share:
+        enabled: true
+        hide-platforms: weibo,qq,wechat,douban,qzone
+    # 不蒜子访问统计
+    busuanzi:
+        enabled: true
+        start_date: 2022-04-01
+    # My Popular Repositories
+    side_bar_repo:
+        enabled: false
+        limit: 3
+    # 文章字数统计
+    word_count:
+        enabled: true
+    # 页面右上角，以及「关于」页面的二维码
+    # 修改图片请替换 assets/images/qrcode.jpg
+    qrcode:
+        enabled: false
+        image_alt: 闷骚的程序员
+    # 维基索引页使用哪种视图，支持 列表（list）/分类（cate）
+    wiki:
+        view: cate
+# 压缩页面内容
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+# 代码高亮风格，支持的 theme 列表见 https://github.com/mzlogin/rouge-themes
+highlight_theme: github
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Jia Jun Yeh
+organization: 
+organization_url: 
+github_username: xnum
+location: Taiwan
+email: xnumtw@gmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首頁
+
+  -
+    href: /categories/
+    label: 分類
+
+  -
+    href: /archives/
+    label: 歸檔
+
+#   -
+#     href: /open-source/
+#     label: 开源
+
+  -
+    href: /wiki/
+    label: 維基
+
+  -
+    href: /links/
+    label: 連結
+
+  -
+    href: /about/
+    label: 關於
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 10
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:title/
+plugins:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk, utterances
+comments_provider: utterances
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: mzlogin
+    repo: blog-comments
+    oauth:
+        client_id: d2e1cbbd298958076462
+        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: xnum
+    repo: xnum.github.io
+    clientID: 
+    clientSecret: 
+# https://utteranc.es/
+utterances:
+    repo: xnum/xnum.github.io
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#      Google      #
+# ---------------- #
+google:
+    analytics_id: UA-69634995-3
+    adsense:
+        footer: true
+        sidebar: true 
+        sidebar-detail: true 
+        content_header: false
+        content_footer: false

@@ -1,0 +1,13 @@
+- name: Software Engineer
+  keywords:
+      - C++ 11/14/17
+      - Golang
+      - PostgreSQL
+      - TiDB
+- name: Infrastructure
+  keywords:
+      - Proxmox VE
+      - Kubernetes
+- name: Front-End
+  keywords:
+      - vue.js
