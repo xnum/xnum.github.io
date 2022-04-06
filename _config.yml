@@ -2,8 +2,8 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-#url: https://xnum.github.io
-url: https://ln.xnum.tw
+url: https://xnum.github.io
+#url: https://ln.xnum.tw
 date_format: "ordinal"
 title: xnum's blog
 subtitle: ''

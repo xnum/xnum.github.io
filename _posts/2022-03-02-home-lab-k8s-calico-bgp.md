@@ -6,6 +6,7 @@ categories:
 - home_lab
 - sys_admin
 - networking
+- k8s
 ---
 
 ## 目標
