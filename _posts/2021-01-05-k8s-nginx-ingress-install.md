@@ -5,6 +5,8 @@ date: 2021-01-05 18:54 +0800
 categories: k8s
 ---
 
+2022-04-11 更新 k8s 1.23 版本寫法
+
 # 前言
 
 WAN進來先用port forward走到虛擬IP的80,443
@@ -34,7 +36,7 @@ haproxy listens on *:80 *:443 並開啟 proxy protocol
 
 # nginx-ingress
 
-使用helm3進行安裝 Chart version 3.19, App version 0.42.0
+使用helm3進行安裝
 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
@@ -72,7 +74,7 @@ controller:
 helm install \
   cert-manager jetstack/cert-manager \
   --namespace ingress \
-  --version v1.1.0 \
+  --version v1.7.2 \
   --set installCRDs=true
 ```
 
@@ -107,6 +109,7 @@ metadata:
   name: foo-com-entry
   namespace: cert-manager
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
     - "*.foo.com"
@@ -122,13 +125,13 @@ metadata:
   name: bar-io-entry
   namespace: cert-manager
 spec:
+  ingressClassName: nginx
   tls:
   - hosts:
     - "*.bar.io"
     secretName: wildcard-bar-io-tls
   rules:
   - host: "*.bar.io"
-
 ```
 
 # Real Ingress
@@ -145,6 +148,7 @@ metadata:
   namespace: default
   annotations: {}
 spec:
+  ingressClassName: nginx
   rules:
   - host: guest.bar.io
     http:
@@ -168,6 +172,7 @@ metadata:
   namespace: panel
   annotations: {}
 spec:
+  ingressClassName: nginx
   rules:
   - host: panel.foo.com
     http:
