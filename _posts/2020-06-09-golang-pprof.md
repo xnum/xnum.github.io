@@ -2,7 +2,7 @@
 layout: post
 title: golang pprof
 date: 2020-06-09 10:48 +0800
-categories: Golang
+categories: golang
 ---
 
 in target program
