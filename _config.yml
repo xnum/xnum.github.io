@@ -3,10 +3,9 @@
 # ---------------- #
 baseurl:
 url: https://xnum.github.io
-#url: https://ln.xnum.tw
 date_format: "ordinal"
 title: xnum's blog
-subtitle: ''
+subtitle: 'Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth.'
 description: ''
 keywords: go,c++,kubernetes,linux
 timezone: Asia/Taipei
@@ -164,7 +163,7 @@ simple_jekyll_search:
 #      Google      #
 # ---------------- #
 google:
-    analytics_id: UA-69634995-3
+    analytics_id: G-ECNVTV2M96
     adsense:
         footer: true
         sidebar: true 
