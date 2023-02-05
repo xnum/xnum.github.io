@@ -9,6 +9,7 @@ categories: UNIX
 
 prometheus rule是
 
+<!-- {% raw %} -->
 ```
 name: HostClockNotSynchronising
 expr: min_over_time(node_timex_sync_status[1m]) == 0 and node_timex_maxerror_seconds >= 16
@@ -21,6 +22,7 @@ annotations:
     LABELS = {{ $labels }}
   summary: Host clock not synchronising (instance {{ $labels.instance }})
 ```
+<!-- {% endraw %} -->
 
 由node exporter提供 [timex.go](https://github.com/prometheus/node_exporter/blob/master/collector/timex.go)
 

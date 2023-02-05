@@ -1,13 +1,14 @@
-- name: Software Engineer
+- name: Programming language
   keywords:
       - C++ 11/14/17
-      - Golang
-      - PostgreSQL
-      - TiDB
+      - Golang (gin, gorm)
 - name: Infrastructure
   keywords:
-      - Proxmox VE
-      - Kubernetes
-- name: Front-End
+      - Proxmox VE 6~7
+      - Kubernetes 1.25
+      - pfsense
+      - openwrt
+- name: Front-End Frameworks
   keywords:
-      - vue.js
+      - Vue 2
+      - React 17 (antd pro 5.2, umijs 3)

@@ -202,6 +202,7 @@ automation.yaml
 
 configuration.yaml
 
+<!-- {% raw %} -->
 ```
 sensor:
   - platform: template
@@ -227,3 +228,4 @@ sensor:
         unit_of_measurement: "ug/m3"
         value_template: "{{ state_attr('air_quality.cgllc_airmonitor_s1', 'particulate_matter_2_5') }}"
 ```
+<!-- {% endraw %} -->
