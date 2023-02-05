@@ -5,7 +5,7 @@ baseurl:
 url: https://xnum.github.io
 date_format: "ordinal"
 title: xnum's blog
-subtitle: 'Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth.'
+subtitle: ''
 description: ''
 keywords: go,c++,kubernetes,linux
 timezone: Asia/Taipei
