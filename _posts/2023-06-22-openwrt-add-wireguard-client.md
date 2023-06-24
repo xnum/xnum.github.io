@@ -36,11 +36,12 @@ categories: Home_lab
 [Interface]
 PrivateKey = (不需要動)
 Address = 192.168.187.95/24
+DNS = 1.1.1.1
 
 [Peer]
 PublicKey = (從server的這邊複製 OpenWRT > Status > WireGuard > Configuration > Public Key)
 PresharedKey = (剛剛有產生Preshared key的話就是填這邊)
-AllowedIPs = 192.168.187.0/24 (希望哪些流量走VPN，全部就寫0.0.0.0/0)
+AllowedIPs = 192.168.187.0/24 (希望哪些流量走VPN，全部就寫0.0.0.0/0, ::/0)
 Endpoint = (你的IP或host):(listen port)
 PersistentKeepalive = 20
 ```
