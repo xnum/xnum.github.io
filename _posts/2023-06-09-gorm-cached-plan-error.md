@@ -1,7 +1,7 @@
 ---
 layout: post
 title: gorm 使用 postgresql driver 遇到 cached plan must not change result type 錯誤
-categories: [Golang]
+categories: [golang]
 description: 
 keywords: 
 ---
