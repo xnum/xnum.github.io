@@ -24,3 +24,18 @@ err := tx.Where("user_id = ?", req.UserID).FirstOrCreate(&info).Error
 另外`Find()`好像也增加了用法，可以傳struct進去，而且找不到的時候不會回傳error
 
 太信任對gorm的理解程度而沒有寫測試好像是個大雷區
+
+---
+
+2023/08/15
+
+```
+var b3 *Animal
+err = conn.Where("age = '33'").First(b3).Error
+assert.NoError(err)
+assert.Equal("Bear", b3.Name)
+```
+
+傳入一個有型別的nil pointer會導致爆炸 要改成`b3 := &Animal{}`
+
+`invalid value, should be pointer to struct or slice`
