@@ -8,10 +8,13 @@ categories: golang
 
 以HTTP方式來說明的話會是這樣：
 
+```
 00:00:01.000 A001 Request GET /exchange_rate
 00:00:02.000 A002 Request GET /exchange_rate
 00:00:03.000 A003 Request GET /exchange_rate
 00:00:04.000 B001 Request GET /exchange_rate
+```
+
 
 如果A001耗時2.1秒，則A002和A003會使用A001的結果，並等待A001回來
 
