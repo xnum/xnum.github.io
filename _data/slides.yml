@@ -3,6 +3,11 @@
   date: 2017-05-22
   group: 中教大程式戰鬥營
 
+- topic: Clean Arch in Go
+  url: https://hackmd.io/@xnum/clean-arch-in-golang
+  date: 2022
+  group: 公司內部分享
+
 - topic: 在monorepo裡進行config管理
   url: https://hackmd.io/@xnum/slides-monorepo-config
   date: 2023-09-14
