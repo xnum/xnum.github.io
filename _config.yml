@@ -74,9 +74,9 @@ navs:
     href: /archives/
     label: 歸檔
 
-#   -
-#     href: /open-source/
-#     label: 开源
+  -
+    href: /slides/
+    label: 簡報
 
   -
     href: /wiki/

@@ -1,0 +1,9 @@
+- topic: 在monorepo裡進行config管理
+  url: https://hackmd.io/@xnum/slides-monorepo-config
+  date: 2023-09-14
+  group: Golang Taiwan Gathering #74
+
+- topic: 地端自建Kubernetes之旅 - 上線前的那些事
+  url: https://docs.google.com/presentation/d/1TqjzpiWsxqAYF8qV8FikL2kj6a6BSd4sNvy6amQGk9o/edit?usp=sharing
+  date: 2023-09-21
+  group: CNTUG 2023-09
