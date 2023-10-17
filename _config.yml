@@ -20,7 +20,7 @@ components:
     # 分享
     # weibo,qq,wechat,douban,qzone,linkedin,facebook,twitter
     share:
-        enabled: true
+        enabled: false
         hide-platforms: weibo,qq,wechat,douban,qzone
     # 不蒜子访问统计
     busuanzi:
@@ -56,7 +56,7 @@ organization:
 organization_url: 
 github_username: xnum
 location: Taiwan
-email: xnumtw@gmail.com
+email: 
 
 # ---------------- #
 #    Navigation    #
@@ -73,14 +73,6 @@ navs:
   -
     href: /archives/
     label: 歸檔
-
-  -
-    href: /slides/
-    label: 簡報
-
-  -
-    href: /wiki/
-    label: 維基
 
   -
     href: /links/
