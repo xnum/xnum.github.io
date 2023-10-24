@@ -75,10 +75,6 @@ navs:
     label: 歸檔
 
   -
-    href: /links/
-    label: 連結
-
-  -
     href: /about/
     label: 關於
 
