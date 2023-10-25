@@ -1,6 +1,6 @@
 ---
 layout: post
-title: home lab - openwrt gateway設定
+title: openwrt gateway設定
 date: 2022-02-27 00:01 +0800
 categories:
 - home_lab

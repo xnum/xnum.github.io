@@ -1,6 +1,6 @@
 ---
 layout: post
-title: home lab - 窮人版x86 L2 switch
+title: 窮人版x86 L2 switch
 date: 2022-02-27 00:02 +0800
 categories:
 - home_lab

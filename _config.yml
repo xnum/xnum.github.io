@@ -5,7 +5,7 @@ baseurl:
 url: https://xnum.github.io
 date_format: "ordinal"
 title: xnum's blog
-subtitle: ''
+subtitle: '這是一個軟體工程師的部落格。內容包含後端、Go語言、C++、k8s、Linux系統管理、在家折騰 (HomeLab)。'
 description: ''
 keywords: go,c++,kubernetes,linux
 timezone: Asia/Taipei

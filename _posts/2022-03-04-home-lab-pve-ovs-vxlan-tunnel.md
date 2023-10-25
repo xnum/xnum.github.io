@@ -1,6 +1,6 @@
 ---
 layout: post
-title: home lab - proxmox ve 使用 OVS 搭建異地 overlay network
+title: proxmox ve 使用 OVS 搭建異地 overlay network
 date: 2022-03-04 00:00 +0800
 categories:
 - home_lab

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenWRT 新增 WireGuard 用戶端操作方式
-categories: Home_lab
+categories: home_lab
 ---
 
 ## Install WireGuard client

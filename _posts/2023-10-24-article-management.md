@@ -1,7 +1,7 @@
 ---
 layout: post
-title: HomeLab 打造知識庫 - 自架RSS Feed和書籤管理系統
-categories: [Home_lab]
+title: 打造知識庫 - 自架RSS Feed和書籤管理系統
+categories: [home_lab]
 ---
 
 早期我就有訂閱RSS的習慣，並使用Feedly當成彙整平台。使用RSS來訂閱各種技術Blog和新聞，就不需要跟個喪屍一樣整天刷網站。

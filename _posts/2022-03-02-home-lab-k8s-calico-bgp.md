@@ -1,6 +1,6 @@
 ---
 layout: post
-title: home lab - calico bgp mode on kubernetes
+title: calico bgp mode on kubernetes
 date: 2022-03-02 00:00 +0800
 categories:
 - home_lab
