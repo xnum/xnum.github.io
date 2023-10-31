@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 論程式的可觀測性和自動化監控
-categories: [Dev]
+categories: [dev]
 description: 如何從可觀測性的角度出發，來改善程式和系統的品質，以及快速定位異常點
 ---
 
