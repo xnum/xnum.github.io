@@ -8,3 +8,4 @@ Gemfile.lock
 .vscode/
 .jekyll-metadata
 _config.local.yml
+*.sh
