@@ -77,6 +77,7 @@ func main() {
 }
 ```
 
+這樣做的原因是：response的修改通常是DB和API一起的。而request不總是單純的CRUD，有可能無法對應到response上，所以獨立定義新的struct。這樣的邏輯通常已經能支持中小型專案規模的發展。
 
 
 ## Mapping Strategy
