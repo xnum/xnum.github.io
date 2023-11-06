@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rob Pike的五條程式設計規則
-categories: [dev]
+categories: [dev, 文摘]
 description: Rob Pike近代最為人所知的應該是Go語言的核心開發者，這邊是他歸納的五條程式設計規則
 ---
 
