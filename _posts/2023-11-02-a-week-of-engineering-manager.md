@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 一個Engineering Manager的一週時間分配
-categories: [manager, 文摘]
+title: 文摘 - 一個Engineering Manager的一週時間分配
+categories: [manager, digest]
 description: 從網路上看到這篇文章，覺得蠻實用的整理下來
 ---
 
