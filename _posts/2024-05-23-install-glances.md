@@ -4,16 +4,6 @@ title: 在Linux上面安裝glances並設定為系統服務
 categories: [sys_admin]
 ---
 
-以下是潤飾後的文章：
-
----
-
-layout: post  
-title: 在 Linux 上安裝 Glances 並設定為系統服務  
-categories: [sys_admin]  
-
----
-
 由於在 Docker 中無法查看某些系統資訊，加上需要指定版本，因此需要進行一個繁瑣的 Python 程式安裝流程。
 
 首先，我們需要建立一個虛擬環境來隔離即將安裝的依賴，以免影響系統的穩定性。
